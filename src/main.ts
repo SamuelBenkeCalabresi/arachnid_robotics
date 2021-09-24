@@ -10,12 +10,16 @@ const generatePosition = (
 ): [number, number] => {
   const position: Position = { x, y };
   const cleanedMessage = cleanMessage(message);
+
+  if (cleanedMessage === null) return [x, y];
+
   const finalPosition = positionControl(position, cleanedMessage);
 
   return [finalPosition.x, finalPosition.y];
 };
 
-const cleanMessage = (message: string): string[] => {
+const cleanMessage = (message: string): string[] | null => {
+  if (message === "") return null;
   return message
     .split("")
     .filter(
