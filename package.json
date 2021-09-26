@@ -1,9 +1,10 @@
 {
   "name": "arachnid_robots",
   "version": "0.0.0",
+  "main": "dist/main.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "start": "tsc && node dist/main.js",
+    "build": "tsc",
     "serve": "vite preview",
     "test": "jest --watchAll --verbose"
   },
