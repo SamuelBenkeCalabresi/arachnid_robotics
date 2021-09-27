@@ -18,3 +18,13 @@ export const right: { [key: string]: string } = {
   DOWN: "LEFT",
   LEFT: "UP",
 };
+
+export const maxBoosts = [1, 2, 3, 4, 5];
+
+export const messageElements = [
+  "F",
+  "B",
+  "L",
+  "R",
+  ...maxBoosts.map((number) => String(number)),
+];

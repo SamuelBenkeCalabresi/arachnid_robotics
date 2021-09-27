@@ -44,3 +44,23 @@ l/r/b -> update variable storing the direction:
 e.g. l -> means next f I update +0x, -1y
 ll -> means next f I update like backwards -1x, +0y
 backwards b -> turn opposite direction
+
+## Quick Overview MK3
+
+Forward instructions can now have a number in front of them. 3F, 5F etc
+
+The tank contains 30 units of fuel.
+Conveniently boosting into space over canyons forward 1 position and burns 1 unit of fuel.
+
+You can boost up to 5 units in one go before the thing overheats.
+
+Negative space is fine on Mars BTW. No building edges to fall off.
+
+### First brainstorming MK3
+
+Fs in MK3 can have a precedent number that makes the F times of the number
+this can be done with a map inside the cleanMessage but a getBoost method to handle the numbers was created instead.
+
+Assumption on the message string in input with no series of numbers / numbers allowed
+Allowed messages e.g. FFFFFF3FLFFFFFFR5FL and FFFFFFFF5FRFFFFFF3FRFFFFFFLFFFFF5FFF5FFFFFFFLFFFFF
+The cleanMessage method can have more functonality to filter not allowed message elements.
